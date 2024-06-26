@@ -28,11 +28,11 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Ensure you add SONAR_TOKEN in your repository secrets
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
         with:
           args: >
-            -Dsonar.projectKey=chetna0207  # Replace with your actual SonarCloud project key
-            -Dsonar.organization=chetna0207  # Replace with your actual SonarCloud organization key
+            -Dsonar.projectKey=chetna0207  
+            -Dsonar.organization=chetna0207  
             -Dsonar.sources=.
             -Dsonar.tests=.
             -Dsonar.test.inclusions="**/*.test.js,**/*.spec.js"
